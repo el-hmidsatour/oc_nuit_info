@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBER_ORB // VISUALIZER</title>
+    <title>CYBER_ORB // VISUALISEUR</title>
     
-    <!-- External Libraries (Three.js) -->
+    <!-- Bibliothèques Externes (Three.js) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/effects/AsciiEffect.js"></script>
 
-    <!-- CSS Links -->
+    <!-- Liens CSS -->
     <link rel="stylesheet" href="style-global.css">
     <link rel="stylesheet" href="style-viz.css">
 </head>
@@ -17,37 +17,37 @@
 
     <!-- Navigation -->
     <nav class="cyber-nav">
-        <div class="brand">CYBER_ORB // <span class="blink">ONLINE</span></div>
+        <div class="brand">CYBER_ORB // <span class="blink">EN_LIGNE</span></div>
         <div class="links">
-            <a href="index.html" class="active">VISUALIZER</a>
-            <a href="about.html">ABOUT_SYSTEM</a>
+            <a href="index.html" class="active">VISUALISEUR</a>
+            <a href="about.html">À_PROPOS</a>
         </div>
     </nav>
 
-    <!-- UI Overlay -->
+    <!-- Superposition UI -->
     <div id="ui-layer">
         <div class="hud-box" id="start-screen">
-            <h1>SYSTEM_READY</h1>
-            <p class="status-text">[ INITIALIZING LIQUID CORE ]</p>
+            <h1>SYSTÈME_PRÊT</h1>
+            <p class="status-text">[ INITIALISATION DU CŒUR LIQUIDE ]</p>
             
             <label class="file-btn">
                 <input type="file" id="file-input" accept="audio/*" />
-                > UPLOAD_AUDIO_FILE
+                > CHARGER_FICHIER_AUDIO
             </label>
         </div>
     </div>
 
-    <!-- Controls -->
+    <!-- Contrôles -->
     <div class="controls-bar" id="controls">
-        <button id="btn-toggle">TOGGLE ASCII / HD</button>
-        <button onclick="document.getElementById('file-input').click()">CHANGE TRACK</button>
+        <button id="btn-toggle">BASCULER ASCII / HD</button>
+        <button onclick="document.getElementById('file-input').click()">CHANGER DE PISTE</button>
     </div>
 
-    <!-- Canvas Container -->
+    <!-- Conteneur Canvas -->
     <div id="container"></div>
     <audio id="audio-element" crossorigin="anonymous"></audio>
 
-    <!-- JS Files (Order Matters) -->
+    <!-- Fichiers JS -->
     <script src="js-audio.js"></script>
     <script src="js-scene.js"></script>
     <script src="js-main.js"></script>
