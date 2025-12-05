@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER_ORB // ABOUT</title>
+    <link rel="stylesheet" href="style-global.css">
+    <style>
+        .content-box {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 40px;
+            border: 1px solid var(--primary);
+            background: rgba(0, 20, 0, 0.9);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+        h2 { border-bottom: 1px dashed var(--primary); padding-bottom: 10px; }
+        p { line-height: 1.6; margin-bottom: 20px; }
+        .back-link { display: inline-block; margin-top: 20px; color: white; text-decoration: none; border: 1px solid white; padding: 10px 20px; }
+        .back-link:hover { background: white; color: black; }
+    </style>
+</head>
+<body>
+
+    <nav class="cyber-nav">
+        <div class="brand">CYBER_ORB // <span class="blink">INFO</span></div>
+        <div class="links">
+            <a href="index.html">VISUALIZER</a>
+            <a href="about.html" class="active">ABOUT_SYSTEM</a>
+        </div>
+    </nav>
+
+    <div class="content-box">
+        <h2>// PROJECT_OVERVIEW</h2>
+        <p>
+            The CYBER_ORB is a WebGL-based audio analysis tool rendered entirely in ASCII characters. 
+            It utilizes the Three.js library to calculate 3D geometry and maps luminance to text characters 
+            in real-time.
+        </p>
+
+        <h2>// TECHNICAL_SPECS</h2>
+        <p>
+            > <strong>Library:</strong> Three.js r128<br>
+            > <strong>Effect:</strong> AsciiEffect.js<br>
+            > <strong>Audio:</strong> Web Audio API (FFT Analysis)<br>
+            > <strong>Animation:</strong> Vertex Displacement (Liquid Sine Wave)
+        </p>
+
+        <p>
+            Upload any MP3 or WAV file to see the liquid core react to frequency bands. 
+            The liquid motion algorithm ensures the visual remains alive even during silence.
+        </p>
+
+        <a href="index.html" class="back-link">< RETURN_TO_VISUALIZER</a>
+    </div>
+
+</body>
+</html>

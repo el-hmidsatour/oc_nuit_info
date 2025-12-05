@@ -1,0 +1,75 @@
+/* --- CANVAS & LAYOUT --- */
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* --- UI OVERLAY --- */
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.hud-box {
+    background: var(--glass);
+    border: 1px solid var(--primary);
+    padding: 40px;
+    text-align: center;
+    pointer-events: auto;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.5s ease;
+}
+
+h1 { margin: 0 0 10px 0; font-size: 2rem; text-shadow: 2px 2px 0px #003300; letter-spacing: 5px; }
+.status-text { font-size: 12px; margin-bottom: 25px; }
+
+/* --- CONTROLS --- */
+.controls-bar {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    pointer-events: auto;
+    z-index: 20;
+    opacity: 0; 
+    transition: opacity 0.5s;
+}
+
+.show-controls { opacity: 1; }
+
+button, .file-btn {
+    background: black;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 12px 24px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+button:hover, .file-btn:hover {
+    background: var(--primary);
+    color: black;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+input[type="file"] { display: none; }

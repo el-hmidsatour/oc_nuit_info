@@ -1,0 +1,49 @@
+:root {
+    --primary: #00ff00;
+    --bg: #000000;
+    --glass: rgba(0, 20, 0, 0.8);
+    --nav-height: 60px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary);
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+.cyber-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(0,0,0,0.9);
+    border-bottom: 1px solid var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.brand { font-size: 1.2rem; font-weight: bold; letter-spacing: 2px; }
+.blink { animation: blinker 1s linear infinite; }
+
+.links a {
+    color: #004400;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links a:hover, .links a.active {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+@keyframes blinker { 50% { opacity: 0; } }

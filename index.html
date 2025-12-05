@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER_ORB // VISUALIZER</title>
+    
+    <!-- External Libraries (Three.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/effects/AsciiEffect.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style-global.css">
+    <link rel="stylesheet" href="style-viz.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="brand">CYBER_ORB // <span class="blink">ONLINE</span></div>
+        <div class="links">
+            <a href="index.html" class="active">VISUALIZER</a>
+            <a href="about.html">ABOUT_SYSTEM</a>
+        </div>
+    </nav>
+
+    <!-- UI Overlay -->
+    <div id="ui-layer">
+        <div class="hud-box" id="start-screen">
+            <h1>SYSTEM_READY</h1>
+            <p class="status-text">[ INITIALIZING LIQUID CORE ]</p>
+            
+            <label class="file-btn">
+                <input type="file" id="file-input" accept="audio/*" />
+                > UPLOAD_AUDIO_FILE
+            </label>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-bar" id="controls">
+        <button id="btn-toggle">TOGGLE ASCII / HD</button>
+        <button onclick="document.getElementById('file-input').click()">CHANGE TRACK</button>
+    </div>
+
+    <!-- Canvas Container -->
+    <div id="container"></div>
+    <audio id="audio-element" crossorigin="anonymous"></audio>
+
+    <!-- JS Files (Order Matters) -->
+    <script src="js-audio.js"></script>
+    <script src="js-scene.js"></script>
+    <script src="js-main.js"></script>
+</body>
+</html>
